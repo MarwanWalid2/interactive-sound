@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interactive sound</title>
+    <style>
+        #block1 {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    right: 50%;
+    bottom: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: block;
+    margin: 0 auto;
+    color: white;
+
+}
+#block2 {
+    position: fixed;
+    left: 50%;
+    top: 0%;
+    right: 0%;
+    bottom: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+}
+#block3 {
+    position: fixed;
+    left: 0%;
+    top: 50%;
+    right: 50%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+ 
+
+}
+#block4 {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+
+}
+    </style>
+</head>
+<body>
+    <!--make a website with four squares one on each corner-->
+    <div>
+        <div id="block1">
+            <h1>press A to play sound 1</h1>
+        </div>
+        <div id="block2">
+            <h1>press S to play sound 2</h1>
+        </div>
+
+        <div id="block3">
+            <h1>press D to play sound 3</h1>
+        </div>
+        <div id="block4">
+            <h1>press F to play sound 4</h1>
+        </div>
+    </div>
+
+    <audio id="audio1" controls style="display:none">
+        <source src="key01.mp3"> 
+      </audio>
+      <audio id="audio2" controls style="display:none">
+        <source src="key02.mp3"> 
+      </audio>
+      <audio id="audio3" controls style="display:none">
+        <source src="key03.mp3"> 
+      </audio>
+      <audio id="audio4" controls style="display:none">
+        <source src="key04.mp3"> 
+      </audio>
+      <script>
+        document.addEventListener('keydown', function(a) {
+  if (a.keyCode == 65) {
+    document.getElementById('audio1').play();
+  }
+  else if(a.keyCode == 83){
+    document.getElementById('audio2').play();
+  }
+  else if(a.keyCode == 68){
+    document.getElementById('audio3').play();
+  }
+  else if(a.keyCode == 70){
+    document.getElementById('audio4').play();
+  }
+});
+      </script>
+</body>
+</html>
